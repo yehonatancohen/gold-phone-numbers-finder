@@ -68,10 +68,10 @@ def num_cool(num):
 def mp_handler():
     p = multiprocessing.Pool(60)
     l = []
-    for result in p.imap(num_cool, open('test1.txt', 'r').readlines()):
+    for result in p.imap(num_cool, open('golant.txt', 'r').readlines()):
         l.append(result)
         if 'no' not in result:
-            with open('test2.txt', 'a+') as f:
+            with open('goldengolant.txt', 'a+') as f:
                 f.write(result + '\n')
             print(Fore.GREEN + result)
         else:
