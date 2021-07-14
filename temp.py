@@ -17,6 +17,16 @@ def check_following(num):
 
     return [maxfollowing, amount]
 
+def ryhmes(num):
+    index = 0
+    curr = 0
+    max = 0
+    end = ((len(num) - 1) // 2) 
+    for i in range(0, end):
+        if num[i] == num[i + 4]:
+            curr += 1
+    return curr  
+
 def ends_with_3_zeros(num):
     amount = 0
     for i in reversed(num):
@@ -36,4 +46,5 @@ def palindrome(s):
 
         
 #print(palindrome('1220321'))
-print(check_following(list(map(int,'1166333'))))
+#print(check_following(list(map(int,'1166333'))))
+print(ryhmes(list(map(int,'2031203'))))
